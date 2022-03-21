@@ -1,8 +1,6 @@
 ## Part 1: Test it with SQL
-id INTEGER
-employer VARCHAR(255)
-name VARCHAR(255)
-skills VARCHAR(255)
+ SELECT *
+ FROM job;
 
 ## Part 2: Test it with SQL
 SELECT name FROM employer
