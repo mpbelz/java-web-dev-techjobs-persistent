@@ -57,15 +57,8 @@ public class HomeController {
             return "add";
         }
 
-//        Optional optEmployer = employerRepository.findById(employerId);
-//        if (optEmployer.isPresent()) {
-//            Employer employer = (Employer) optEmployer.get();
-//            newJob.setEmployer(employer);
-//            jobRepository.save(newJob);
-//        }
         Employer employer = employerRepository.findById(employerId).orElse(new Employer());
         newJob.setEmployer(employer);
-//        jobRepository.save(newJob);
 
         List<Skill> skillobjs = (List<Skill>) skillRepository.findAllById(skills);
         newJob.setSkills(skillobjs);
